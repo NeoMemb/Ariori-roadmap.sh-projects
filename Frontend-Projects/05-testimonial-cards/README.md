@@ -1,3 +1,2 @@
 # Testimonial Cards
-
-![Testimonial Cards](./testimonial-cards.png)
+[from roadmap.sh](https://roadmap.sh/projects/testimonial-cards)
