@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    margin-bottom: 1rem;
+}
+
+body {
+    padding: 40px;
+    margin: 10px;
+    border: 2px solid black;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    font-weight: bold;
+}
+
+div {
+    padding-block: 10px;
+}
+
+.txt-green {
+    color: green;
+}
+
+.p-y-1{
+    padding-block: 15px;
+}
+
+.txt-blue {
+    color: blue;
+}
+
+ul li{
+    list-style-position: inside;
+}
