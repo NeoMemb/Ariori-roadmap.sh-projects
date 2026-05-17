@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "description": "Testing the To-do task on CLI",
+    "status": "todo",
+    "createdAt": "2026-05-17T14:39:22.788Z",
+    "updatedAt": "2026-05-17T14:39:22.789Z"
+  }
+]
