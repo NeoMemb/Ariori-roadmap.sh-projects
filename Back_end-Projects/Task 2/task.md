@@ -24,4 +24,4 @@ Output:
 - ...
 
 ```
-The project URL in roadmap.sh: https://roadmap.sh/projects/github-user-activity 
+The project URL in roadmap.sh: https://roadmap.sh/projects/github-user-activity
