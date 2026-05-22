@@ -1,6 +1,7 @@
-import { readExpenses } from "../utils/fileHandler.js";
+import { Expense, ExpenseMonthlySummary } from "../types";
+import { readExpenses } from "../utils/fileHandler";
 
-export function summarizeExpenses(options) {
+export function summarizeExpenses(options: ExpenseMonthlySummary) {
   const expenses = readExpenses();
 
   let filtered = expenses;

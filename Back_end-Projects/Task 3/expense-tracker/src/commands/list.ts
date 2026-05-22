@@ -1,4 +1,4 @@
-import { readExpenses } from "../utils/fileHandler.js";
+import { readExpenses } from "../utils/fileHandler";
 
 export function listExpenses() {
   const expenses = readExpenses();

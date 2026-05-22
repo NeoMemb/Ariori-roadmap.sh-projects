@@ -1,16 +1,18 @@
 import fs from "fs";
-import { Expenses } from "../types.ts";
+import type { Expense } from "../types.ts";
 
 const FILE = "./data/expenses.json";
 
-export function readExpenses(): Expenses {
+export function readExpenses(): Expense[] {
   if (!fs.existsSync(FILE)) {
     fs.writeFileSync(FILE, JSON.stringify([]));
   }
+  // In case the file exist, but TOTALLY empty...
+  if (!fs.readFileSync(FILE, "utf-8").trim()) { return []}
 
   return JSON.parse(fs.readFileSync(FILE, "utf-8"));
 }
 
-export function writeExpenses(expenses: JSON[]): void {
+export function writeExpenses(expenses: Expense[]): void {
   fs.writeFileSync(FILE, JSON.stringify(expenses, null, 2));
 }

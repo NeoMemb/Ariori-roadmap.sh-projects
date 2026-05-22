@@ -1,4 +1,4 @@
-import { readExpenses, writeExpenses } from "../utils/fileHandler.js";
+import { readExpenses, writeExpenses } from "../utils/fileHandler";
 
 export function deleteExpense(options: { id: string }) {
   const expenses = readExpenses();

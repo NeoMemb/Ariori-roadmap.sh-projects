@@ -1,6 +1,6 @@
 import type { Expense } from "../types.ts";
-import { readExpenses, writeExpenses } from "../utils/fileHandler.ts";
-import { validateId, validateAmount } from "../utils/validator.ts";
+import { readExpenses, writeExpenses } from "../utils/fileHandler";
+import { validateId, validateAmount } from "../utils/validator";
 
 export function updateExpense(options : Expense) {
   const expenses = readExpenses();

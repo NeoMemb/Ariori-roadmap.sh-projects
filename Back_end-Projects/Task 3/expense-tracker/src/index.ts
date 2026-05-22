@@ -7,7 +7,7 @@ import {
   deleteExpense,
   listExpenses,
   summarizeExpenses
-} from "./commands/index.ts";
+} from "./commands/index";
 
 const program = new Command();
 

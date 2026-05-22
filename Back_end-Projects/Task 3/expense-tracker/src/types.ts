@@ -4,3 +4,8 @@ export interface Expense {
     description: string;
     amount: number;
 }
+
+export interface ExpenseMonthlySummary {
+    month: string;
+    total: number;
+}
