@@ -19,3 +19,6 @@ function toggleTheme() {
     moonIcon.style.display = 'block';
   }
 }
+
+const logo = document.querySelector("span.logo");
+logo.textContent = `ariori.dev`;
