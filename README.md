@@ -98,6 +98,8 @@ Click any of the images below to view the readme and live demo of the project.
 
 # Back-end Projects from Roadmap.sh
 *The Backend project from the same learning platform*
-(Task 1 - task tracker)[https://roadmap.sh/projects/task-tracker]
-(Task 2 - github user activity, i.e github event)[https://roadmap.sh/projects/github-user-activity]
-(Task 3 - )[https://roadmap.sh/projects/expense-tracker]
+> Check the Backend folder of this directory
+
+[Task 1 - Task tracker](https://roadmap.sh/projects/task-tracker),\
+[Task 2 - Github user activity](https://roadmap.sh/projects/github-user-activity) (i.e github event),\
+[Task 3 - Expense tracker](https://roadmap.sh/projects/expense-tracker)
