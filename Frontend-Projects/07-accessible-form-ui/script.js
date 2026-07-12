@@ -50,6 +50,9 @@ function setPasswordButtonLabel(isVisible) {
   passwordInput.setAttribute('aria-pressed', isVisible ? 'true' : 'false');
 }
 
+setConfirmPasswordButtonLabel(false);
+setPasswordButtonLabel(false);
+
 confirmPasswordInput.addEventListener('click', () => {
   const isPasswordVisible = confirmPasswordField.type === 'text';
   confirmPasswordField.type = isPasswordVisible ? 'password' : 'text';
