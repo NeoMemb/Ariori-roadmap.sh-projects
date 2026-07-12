@@ -30,17 +30,36 @@ const confirmPasswordField = document.getElementById('confirm-password');
 const openEyeIcon = createEyeIcon(eyeOpenSVG);
 const closeEyeIcon = createEyeIcon(eyeCloseSVG);
 
-passwordInput.appendChild(closeEyeIcon);
-confirmPasswordInput.appendChild(closeEyeIcon.cloneNode(true));
+if (!passwordInput.querySelector('.eye-icon')) {
+  passwordInput.innerHTML = '';
+  passwordInput.appendChild(closeEyeIcon);
+}
 
-passwordInput.addEventListener('click', () => {
-    const isPasswordVisible = passwordField.type === 'text';
-    passwordField.type = isPasswordVisible ? 'password' : 'text';
-    passwordInput.innerHTML = isPasswordVisible ? closeEyeIcon.outerHTML : openEyeIcon.outerHTML;
-});
+if (!confirmPasswordInput.querySelector('.eye-icon')) {
+  confirmPasswordInput.innerHTML = '';
+  confirmPasswordInput.appendChild(closeEyeIcon.cloneNode(true));
+}
+
+function setConfirmPasswordButtonLabel(isVisible) {
+  confirmPasswordInput.setAttribute('aria-label', isVisible ? 'Hide confirm password' : 'Show confirm password');
+  confirmPasswordInput.setAttribute('aria-pressed', isVisible ? 'true' : 'false');
+}
+
+function setPasswordButtonLabel(isVisible) {
+  passwordInput.setAttribute('aria-label', isVisible ? 'Hide password' : 'Show password');
+  passwordInput.setAttribute('aria-pressed', isVisible ? 'true' : 'false');
+}
 
 confirmPasswordInput.addEventListener('click', () => {
-    const isPasswordVisible = confirmPasswordField.type === 'text';
-    confirmPasswordField.type = isPasswordVisible ? 'password' : 'text';
-    confirmPasswordInput.innerHTML = isPasswordVisible ? closeEyeIcon.outerHTML : openEyeIcon.outerHTML;
+  const isPasswordVisible = confirmPasswordField.type === 'text';
+  confirmPasswordField.type = isPasswordVisible ? 'password' : 'text';
+  confirmPasswordInput.innerHTML = isPasswordVisible ? closeEyeIcon.outerHTML : openEyeIcon.outerHTML;
+  setConfirmPasswordButtonLabel(!isPasswordVisible);
+});
+
+passwordInput.addEventListener('click', () => {
+  const isPasswordVisible = passwordField.type === 'text';
+  passwordField.type = isPasswordVisible ? 'password' : 'text';
+  passwordInput.innerHTML = isPasswordVisible ? closeEyeIcon.outerHTML : openEyeIcon.outerHTML;
+  setPasswordButtonLabel(!isPasswordVisible);
 });
